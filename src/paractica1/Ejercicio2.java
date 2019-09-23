@@ -8,51 +8,34 @@ public class Ejercicio2 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//Creo el objeto File
-		File directorio= new File(".\\bin");
-		//creo ek ProcessBuilder con el proceso a ejecutar
-		ProcessBuilder p=new ProcessBuilder("java","ejemplos_clase.Ejercicio2");
-		//Establezco el directorio donde se encuentra el proceso
-		p.directory(directorio);
 		
-		System.out.println("Directorio: "+p.directory());
+		File directorio=new File("C:/Users/ifc/git/DAM2-PSP-UD1-PROCESOS-PRACTICA1/src");
 		
-		//Ejecuto el proceso
-		Process pc=null;
+		ProcessBuilder p1= new ProcessBuilder("CMD","/C","Tree","/F");
+		Process p=null;
+		p1.directory(directorio);
 		try {
-			pc=p.start();
+			p=p1.start();
+			InputStream is=p.getInputStream();
+			int caracter;
 			
-			InputStream a=pc.getInputStream();
-			
-			int b;
-			while((b=a.read())!=-1) {
-				System.out.print((char)b);
+			while((caracter=is.read())!=-1) {
+				System.out.print((char)caracter);
 			}
+			is.close();
 			
 		}catch(IOException e) {
 			e.printStackTrace();
 		}
 		
-		//con list visualizo los archivos
-		String ruta="src";
-		File f=new File(ruta);
-		
-		String[]arbol=f.list();
-		
-		for(int i=0;i<arbol.length;i++) {
-			System.out.println(arbol[i]);
-			File f1=new File(f.getPath(),arbol[i]);
+		try {
+			int exitVal=p.waitFor();
 			
-			if(f1.isDirectory()) {
-				String []contenido=f1.list();
-				
-				for(int j=0;j<contenido.length;j++) {
-					
-					System.out.println(" "+contenido[j]);
-				}
-			}
+		} catch(InterruptedException e) {
+			e.printStackTrace();
 		}
-
+	
+		
 	}
 
 }
