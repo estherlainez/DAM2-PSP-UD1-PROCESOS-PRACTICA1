@@ -6,23 +6,22 @@ public class Ejercicio3 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner teclado=new Scanner(System.in);
-		System.out.print("Introduzca numero ");
-		int numero=teclado.nextInt();
-		int resultado=factorial(numero);
-		System.out.println("El factorial de "+ numero +" = " +resultado);
-
-	}
-
-public static int factorial(int n) {
+		int entrada=5;
+		if(args.length>=1) {
+			entrada= Integer.valueOf(args[0]);
+			
+		}
+		//Calcular el factorial de entrada
+		//El factorial de un numero es la multiplcacion por todos sus valores
+		//!5=5*4*3*2*1
+		for(int i=entrada -1;i>1;i--) {
+			//entrada*=i;
+			entrada=i*entrada;
+			
+		}
 		
-		int r;
-		if (n==0) {
-			return r = 1;
-		}else {
-			return r=n * factorial(n-1);
-			}
-		
+		System.out.println("El factorial es "+entrada);
 		
 	}
+
 }
