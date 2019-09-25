@@ -5,7 +5,10 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class Ejercicio2 {
-
+/*
+ * Partiendo del código anterior, crea un programa que muestre el árbol de carpetas
+ *  del directorio del proyecto y el contenido de cada una de ellas.
+ */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		

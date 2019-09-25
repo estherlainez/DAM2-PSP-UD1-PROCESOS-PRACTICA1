@@ -3,7 +3,10 @@ package paractica1;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+/*
+ * Crea un programa que invoque al comando Tree sobre la carpeta del proyecto y muestra su salida.
 
+ */
 public class Ejercicio1 {
 
 	public static void main(String[] args) {

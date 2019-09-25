@@ -3,7 +3,9 @@ package paractica1;
 import java.util.Scanner;
 
 public class Ejercicio3 {
-
+/*
+ * Crea un programa que calcule el factorial de un número recibido como parámetro.
+ */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int entrada=5;

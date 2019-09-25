@@ -3,19 +3,15 @@ package paractica1;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
+import java.util.*;
+public class Ejercicio10 {
 
-public class Ejercicio6 {
-/*
- * Crea un programa para ejecutar Ejercicio5. 
- * Muestra por pantalla el valor de salida comprobando 
- * tanto el caso correcto como el incorrecto.
-
- */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Scanner teclado=new Scanner(System.in);
 		File f=new File("./bin");
-		ProcessBuilder pb=new ProcessBuilder("java","paractica1.Ejercicio5","Esther");
+		System.out.println("Introduzca lo que desee");
+		String cadena=teclado.nextLine();
+		ProcessBuilder pb=new ProcessBuilder("java","paractica1.Ejercicio9",cadena);
 
 		pb.directory(f);
 		
@@ -30,12 +26,15 @@ public class Ejercicio6 {
 				System.out.print((char)caracter);
 			}
 			is.close();
+			
 			System.out.println(p.waitFor());
+			
 		}catch(IOException e) {
 			e.printStackTrace();
 		}catch(InterruptedException e) {
 			e.printStackTrace();
 		}
+
 
 	}
 

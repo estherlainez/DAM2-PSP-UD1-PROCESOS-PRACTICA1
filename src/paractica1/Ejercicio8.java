@@ -3,19 +3,17 @@ package paractica1;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 
-public class Ejercicio6 {
+public class Ejercicio8 {
 /*
- * Crea un programa para ejecutar Ejercicio5. 
- * Muestra por pantalla el valor de salida comprobando 
- * tanto el caso correcto como el incorrecto.
-
+ * Realiza un programa para ejecutar Ejercicio7 y ejecutalo comprobando que 
+ * el código de salida es correcto en todos los casos.
  */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+
 		File f=new File("./bin");
-		ProcessBuilder pb=new ProcessBuilder("java","paractica1.Ejercicio5","Esther");
+		ProcessBuilder pb=new ProcessBuilder("java","paractica1.Ejercicio7","5");
 
 		pb.directory(f);
 		
