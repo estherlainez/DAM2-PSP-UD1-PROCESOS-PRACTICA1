@@ -27,6 +27,27 @@ public class Ejercicio7 {
 			}
 		}
 		*/
+		
+			 try{
+			   Integer n = null;
+				 	if( Integer.valueOf(args[0])== n) {
+				 		esCadena=false;
+				 	}
+				}catch(NumberFormatException e){
+				     e.getStackTrace();
+				}
+			  
+			  try{
+				  String n = null;
+					 if( String.valueOf(args[0])== n) {
+					 
+					 	esCadena=true;
+					 }
+				}catch(NumberFormatException e){
+					 e.getStackTrace();
+				}
+			  
+			  
 		  if (args.length < 1) { //si hay más de 1 parámetro
 			  if(args[0].length()<1) {
 					System.out.println(args[0]);
@@ -41,13 +62,8 @@ public class Ejercicio7 {
 	        	System.exit(0);
 	        }
 		
-		  try{
-			  Integer.valueOf(args[0]);
-			  
-			    
-			}catch(NumberFormatException e){
-			     e.getStackTrace();
-			}
+		
+		  
 		
 		
 	}
