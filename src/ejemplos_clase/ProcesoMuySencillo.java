@@ -1,4 +1,4 @@
-package practica1;
+package ejemplos_clase;
 
 import java.io.File;
 import java.io.IOException;
@@ -20,7 +20,7 @@ public class ProcesoMuySencillo {
 			
 			int caracter;
 			while((caracter=is.read())!=-1) {
-				System.out.println((char)caracter);
+				System.out.print((char)caracter);
 			}
 		}catch(IOException e) {
 			e.getStackTrace();
