@@ -1,4 +1,4 @@
-package paractica1;
+package practica1;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,7 +11,7 @@ public class Ejercicio10 {
 		File f=new File("./bin");
 		System.out.println("Introduzca lo que desee");
 		String cadena=teclado.nextLine();
-		ProcessBuilder pb=new ProcessBuilder("java","paractica1.Ejercicio9",cadena);
+		ProcessBuilder pb=new ProcessBuilder("java","practica1.Ejercicio9",cadena);
 
 		pb.directory(f);
 		

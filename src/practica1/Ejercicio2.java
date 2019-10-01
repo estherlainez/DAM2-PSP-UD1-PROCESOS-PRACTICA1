@@ -1,4 +1,4 @@
-package paractica1;
+package practica1;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,11 +12,12 @@ public class Ejercicio2 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		File directorio=new File("C:/Users/ifc/git/DAM2-PSP-UD1-PROCESOS-PRACTICA1/src");
-		
+		//File directorio=new File("C:/Users/ifc/git/DAM2-PSP-UD1-PROCESOS-PRACTICA1/src");
+		File directorio1=new File("C:/Users/MSI/git/DAM2-PSP-UD1-PROCESOS-PRACTICA1/src");
 		ProcessBuilder p1= new ProcessBuilder("CMD","/C","Tree","/F");
 		Process p=null;
-		p1.directory(directorio);
+		//p1.directory(directorio);
+		p1.directory(directorio1);
 		try {
 			p=p1.start();
 			InputStream is=p.getInputStream();

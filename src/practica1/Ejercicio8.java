@@ -1,4 +1,4 @@
-package paractica1;
+package practica1;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,9 +11,8 @@ public class Ejercicio8 {
  */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
 		File f=new File("./bin");
-		ProcessBuilder pb=new ProcessBuilder("java","paractica1.Ejercicio7","5");
+		ProcessBuilder pb=new ProcessBuilder("java","practica1.Ejercicio7","5");
 
 		pb.directory(f);
 		
@@ -28,13 +27,23 @@ public class Ejercicio8 {
 				System.out.print((char)caracter);
 			}
 			is.close();
-			System.out.println(p.waitFor());
 		}catch(IOException e) {
 			e.printStackTrace();
-		}catch(InterruptedException e) {
+		}
+		
+		   
+	    // Comprobar si el proceso ha finalizado de forma correcta
+		
+	    int valorSalida;
+	    
+	    try {
+	    	valorSalida = p.waitFor();
+	    	System.out.println("Valor de salida: " + valorSalida);
+	    }catch(InterruptedException e) {
 			e.printStackTrace();
 		}
-
+	   
+   	
 	}
 
 }
